@@ -33,7 +33,7 @@ vim.schedule(function()
 end)
 
 -- Enable break indent
-vim.o.breakindent = true
+--vim.o.breakindent = true
 
 -- Save undo history
 vim.o.undofile = true
@@ -73,7 +73,7 @@ vim.o.inccommand = 'split'
 vim.o.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 10
+vim.o.scrolloff = 0
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s)
@@ -119,6 +119,10 @@ vim.keymap.set('n', '<C-s>', '<C-^>jzz') -- toggle last file
 vim.keymap.set('i', '<C-s>', '<ESC><C-^>jzz') -- toggle last file
 vim.keymap.set('n', 'zz', '<Esc>:update<cr>')
 vim.keymap.set('n', ';', '<S-$>') -- Go to end of line
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.softtabstop = 2
+vim.o.expandtab = true
 
 -- window management
 vim.keymap.set('n', '<leader>sv', '<C-w>v', { desc = 'Split window vertically' }) -- split window vertically
