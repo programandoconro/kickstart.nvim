@@ -36,5 +36,13 @@ return {
     map('n', '<leader>0', function()
       list:select(10)
     end, { desc = '[H]arpoon go to file 10' })
+
+    -- Toggle previous & next buffers stored within Harpoon list
+    map('n', '<leader>p', function()
+      harpoon:list():prev()
+    end)
+    map('n', '<leader>n', function()
+      harpoon:list():next()
+    end)
   end,
 }
